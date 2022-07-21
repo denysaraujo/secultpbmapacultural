@@ -22,9 +22,12 @@ services:
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
       - APP_MODE=development
+      - JOBS_INTERVAL=15
+      - REDIS_CACHE=redis
 
     depends_on:
       - db
+      - reids
   
     stdin_open: true
     tty: true
